@@ -11,25 +11,24 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="tbl_user")
-public class User {
+@Table(name = "tbl_beneficiary")
+public class Beneficiary {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="user_id")
+	@Column(name = "beneficiary_id")
 	private long id;
-	
-	@Column(name="account_no")
-	private long acc_no;
-	
-	
-	@Column(name="login_pass")
-	private String log_pass;
-	
-	@Column(name="transaction_no")
-	private String trans_no;
-	
-	@Column(name="transaction_id")
-	private long trans_id;
+
+	@Column(name = "from_account")
+	private long from_acc;
+
+	@Column(name = "name")
+	private String name;
+
+	@Column(name = "to_account")
+	private long to_acc;
+
+	@Column(name = "nick_name")
+	private String nick_name;
 
 }
